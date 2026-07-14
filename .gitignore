@@ -1,0 +1,34 @@
+# Secrets — NEVER commit real credentials. Keep them in .env (git-ignored).
+.env
+.env.local
+
+# Input data — large, obtained separately (data pipeline / download). Not shipped.
+# (data/cities.ipynb and data/README.md are tracked explicitly; git keeps
+# tracking them even though untracked files under data/ are ignored.)
+data/
+
+# Download caches (osmnx / pygris / census)
+cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Experiment run artifacts
+output/*
+!output/.gitkeep
+output_slurm/
+logs/
+nohup*.out
+pid
+*.log
+
+# OS
+.DS_Store
